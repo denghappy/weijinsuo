@@ -1,0 +1,391 @@
+/*规定
+1、样式通过id限定
+2、尽可能多使用直接子代选择器
+*/
+
+
+
+
+/*公共样式*/
+body{
+    font-family:  "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+/*图标字体*/
+@font-face {
+    font-family: 'itcast';
+    src: url('../font/MiFie-Web-Font.eot') format('embeded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('ttf'),
+    url('../font/MiFie-Web-Font.woff') format('woff');
+}
+
+[class^="icon-"],[class*=" icon-"]{
+    font-family: itcast;
+    font-style: normal;
+}
+
+.icon-mobilephone::before{
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone::after{
+    content: "\e909";
+    font-size: 15px;
+}
+
+.icon-logo::before {
+    content: "\e93e";
+}
+
+.icon-icon::before {
+    content: "\e920";
+}
+
+/*头部区域开始*/
+#header{
+
+}
+
+#header > .topbar{
+    height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+    line-height:40px;
+}
+#header > .topbar>.container>.row>div{
+    height: 40px;
+    font-size: 12px;
+    color: #888;
+}
+#header > .topbar>.container>.row>div+div{
+    border-left: 1px solid #c0c0c0;
+}
+#header .mobile-link{
+    font-size: 12px;
+    color: #888;
+}
+#header .mobile-link>img{
+    display: none;
+    position: absolute;
+    left:50%;
+    top:32px;
+    margin-left: -60px;
+    z-index: 1001;
+
+}
+#header .mobile-link:hover{
+    text-decoration: none;
+}
+#header .mobile-link:hover>img{
+    display: block;
+}
+
+#header > .topbar>.container>.row>div:nth-child(3) a{
+    font-size: 12px;
+    color: #888;
+}
+#header > .topbar>.container>.row>div:nth-child(4)> a+a{
+    font-size: 12px;
+    color: #888;
+}
+
+#header .icon-icon{
+
+    font-size: 50px;
+
+    color: #E92322;
+
+    line-height: 50px;
+
+    vertical-align: middle;
+}
+#header .icon-logo{
+
+    font-size: 32px;
+
+    color: #333;
+
+    line-height: 50px;
+
+    vertical-align: middle;
+}
+
+
+/*#header > .topbar>.container>.row>div{*/
+/*background-color: #f40;*/
+/*height: 40px;*/
+/*}*/
+/*#header > .topbar>.container>.row>div:nth-of-type(2n){*/
+/*background-color: #f00;*/
+/*height: 40px;*/
+/*}*/
+/*头部区域结束*/
+
+/*测试样式*/
+/*section{
+    height: 200px;
+    background-color: #fff;
+}
+section:nth-of-type(2n){
+    background-color: #f5f5f5;
+}*/
+
+
+/*通栏广告轮播*/
+#main_ad{}
+#main_ad > .carousel-inner > .item{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+}
+/*什么时候不能用410px高度*/
+
+/*可以通过媒体查询的方式控制*/
+@media(min-width: 768px){
+    /*当屏幕宽度大于768px时（使用大图）才会执行*/
+    #main_ad > .carousel-inner > .item{
+        height: 410px;
+    }
+}
+#main_ad>.carousel-inner>.item>img{
+    width: 100%;
+}
+/*通栏广告轮播结束*/
+
+
+/*网站特色开始*/
+#tese{
+    padding:50px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#tese i{
+    font-size: 34px;
+}
+
+#tese a{
+    color: #888;
+    text-decoration: none;
+}
+
+#tese a:hover{
+    color: #E92322;
+}
+
+#tese>.container>.row>div{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.icon-uniE907:before {
+    content: "\e907";
+}
+
+.icon-pay-square:before {
+    content: "\e937";
+}
+
+.icon-usd:before {
+    content: "\e928";
+}
+
+.icon-insurance:before {
+    content: "\e92d";
+}
+
+/*#tese>.container>.row>div{
+    height: 50px;
+    background-color: #f50;
+}
+#tese>.container>.row>div:nth-of-type(2n){
+    height: 50px;
+    background-color: #04f;
+}*/
+
+/*特色介绍结束*/
+
+
+/*立即预约开始*/
+#yuyue{
+    border-bottom: 1px solid #c0c0c0;
+    padding: 20px 0;
+}
+
+#yuyue>.container>p{
+    /*line-height:50px;*/
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#yuyue>.container>.pull-left>span,
+#yuyue>.container>.pull-left>a {
+    color: #E92322;
+}
+#yuyue>.container>.pull-left>a{
+    border-bottom: 1px dashed #E92322;
+}
+#yuyue>.container>p>a:hover{
+    text-decoration: none;
+}
+
+.icon-uniE906:before{
+    content: "\e906";
+}
+
+.icon-uniE905:before{
+    content: "\e905";
+}
+/*立即预约结束*/
+
+/*产品推荐开始*/
+#products{
+    background-color: #F0F0F0;
+    padding: 40px 0;
+}
+#products>.container>.nav-tabs{
+
+}
+#products>.container>.nav-tabs>li{
+
+}
+#products>.container>.nav-tabs>li>a{
+
+}
+#products>.container>.nav-tabs>li.active>a:hover{
+
+}
+#products>.container>.nav-tabs>li.active{
+
+}
+#products>.container>.nav-tabs>li.active>a{
+
+}
+
+
+
+/*产品推荐结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Bootstrap扩展样式*/
+
+.navbar-itcast {
+    background-color: #fff;
+    border-color: #f5f5f5;
+    margin-bottom:0;
+}
+.navbar-itcast .navbar-brand {
+    color: #777;
+    height:80px;
+
+}
+.navbar-itcast .navbar-brand:hover,
+.navbar-itcast .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.navbar-itcast .navbar-text {
+    color: #777;
+}
+.navbar-itcast .navbar-nav > li > a {
+    color: #777;
+    line-height: 48px;
+    font-size: 14px;
+}
+.navbar-itcast .navbar-nav > li > a:hover,
+.navbar-itcast .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+.navbar-itcast .navbar-nav > .active > a,
+.navbar-itcast .navbar-nav > .active > a:hover,
+.navbar-itcast .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: #e92322;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+.navbar-itcast .navbar-nav > .disabled > a,
+.navbar-itcast .navbar-nav > .disabled > a:hover,
+.navbar-itcast .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-itcast .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+.navbar-itcast .navbar-toggle:hover,
+.navbar-itcast .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-itcast .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-itcast .navbar-collapse,
+.navbar-itcast .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-itcast .navbar-nav > .open > a,
+.navbar-itcast .navbar-nav > .open > a:hover,
+.navbar-itcast .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .navbar-itcast .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.navbar-itcast .navbar-link {
+    color: #777;
+}
+.navbar-itcast .navbar-link:hover {
+    color: #333;
+}
+.navbar-itcast .btn-link {
+    color: #777;
+}
+.navbar-itcast .btn-link:hover,
+.navbar-default .btn-link:focus {
+    color: #333;
+}
+.navbar-itcast .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcast .btn-link:focus {
+    color: #ccc;
+}
